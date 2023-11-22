@@ -59,7 +59,6 @@ class Code {
 }
 
 function copyToClipboard(textToCopy) {
-    // Use the Clipboard API to copy the text to the clipboard
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
         })
@@ -103,7 +102,7 @@ function saveData(event) {
                     var sub4 = myString.substring(3 * substringLength);
 
                     var stri = codeInstance.textToNumber(sub1)+ " " +codeInstance.textToNumber(sub2)+ " " +codeInstance.textToNumber(sub3)+ " " + +codeInstance.textToNumber(sub4);
-                    // copyToClipboard(stri);
+                    copyToClipboard(stri);
                     alert("Copy the Numbers after this alert and paste it in App, after clicking username");
                     alert(stri);
                 }
@@ -134,7 +133,7 @@ function saveData(event) {
         var sub2 = myString.substring(substringLength, 2 * substringLength);
         var sub3 = myString.substring(2 * substringLength, 3 * substringLength);
         var sub4 = myString.substring(3 * substringLength);
-        // copyToClipboard(codeInstance.textToNumber(sub1)+ " " +codeInstance.textToNumber(sub2)+ " " +codeInstance.textToNumber(sub3)+ " " + +codeInstance.textToNumber(sub4));
+        copyToClipboard(codeInstance.textToNumber(sub1)+ " " +codeInstance.textToNumber(sub2)+ " " +codeInstance.textToNumber(sub3)+ " " + +codeInstance.textToNumber(sub4));
         alert("Copy the Numbers after this alert and paste it in App, after clicking username")
         alert(codeInstance.textToNumber(sub1)+ " " +codeInstance.textToNumber(sub2)+ " " +codeInstance.textToNumber(sub3)+ " " + +codeInstance.textToNumber(sub4));
         
